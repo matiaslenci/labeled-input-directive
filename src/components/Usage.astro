@@ -1,20 +1,38 @@
-<section>
-  <h3>Usage</h3>
+<section class="[&>p]:text-lg [&>p]:text-pretty space-y-3">
+  <h3 class="text-3xl font-medium text-red-400">Usage</h3>
   <p>
     To use the directive, simply add the <code>label</code> attribute to your input.
   </p>
-  <pre><code>&amp;#123;input type="text" label="Name"&amp;#125;</code></pre>
+  <div
+    class="border-gray-700 flex flex-row justify-between rounded-lg border font-medium items-center text-gray-300 p-4 w-full bg-gray-800"
+  >
+    <code
+      >&lt;<span class="tag">input</span>
+      <span class="directive">type</span>=<span class="attr">"text"</span>
+      <span class="directive">label</span>=<span class="attr">"Name"</span> /&gt;</code
+    >
+  </div>
+
+
   <p>
     To add an asterisk <code>(*)</code> to the required text, use the <code
       >isRequired</code
     > attribute.
   </p>
-  <pre><code>&amp;#123;input type="text" label="Name" isRequired&amp;#125;</code></pre>
+  <div
+    class="border-gray-700 flex flex-row justify-between rounded-lg border font-medium items-center text-gray-300 p-4 w-full bg-gray-800"
+  >
+    <code>&lt;<span class="tag">input</span> <span class="directive">type</span>=<span class="attr">"text"</span> <span class="directive">label</span>=<span class="attr">"Name"</span> <span class="directive">isRequired</span> /&gt;</code>
+  </div>
   <p>
-    You can modify the styles of the <code>(*)</code> in the global CSS styles of
-    the project or by renaming the <code>required</code> class in the directive.
+    You can modify the styles of the (*) in the global CSS styles of the project
+    or by renaming the required class in the directive.
   </p>
-  <pre><code>.required &#123;
-  color: red;
-&#125;</code></pre>
+  <div
+    class="border-gray-700 flex flex-row justify-between rounded-lg border font-medium items-center text-gray-300 p-4 w-full bg-gray-800"
+  >
+    <pre><code><span class="directive">.required</span> <span class="keys">&#123;</span>
+  color:<span class="attr"> red</span>; 
+<span class="keys">&#125;</span></code></pre>
+  </div>
 </section>
