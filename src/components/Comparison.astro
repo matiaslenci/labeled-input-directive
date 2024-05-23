@@ -1,15 +1,57 @@
-<section>
-  <h3>Comparison</h3>
+<section class="[&>p]:text-lg [&>p]:text-pretty space-y-3">
+  <h3 class="text-3xl font-medium text-red-400">Comparison</h3>
   <p>
     Without using the directive, the HTML code to create a label and an input
     field might look like this:
   </p>
-  <pre><code>&amp;#123;label for="name"&amp;#125;Name:&amp;#123;/label&amp;#125;
-&amp;#123;input type="text" class="form-control" id="name" name="name" required&amp;#125;</code></pre>
+  <div
+    class="border-gray-700 flex flex-row justify-between rounded-lg border font-medium items-center text-gray-300 p-4 w-full bg-gray-800 overflow-container overflow-auto"
+  >
+    <pre><code>&lt;<span class="tag">label</span> <span class="directive">for</span>=<span class="attr">"name"</span>&gt;Name:&lt;<span class="tag">label</span>/&gt;
+&lt;<span class="tag">input</span> <span class="directive">type</span>=<span class="attr">"text"</span> <span class="directive">class</span>=<span class="attr">"form-control"</span> <span class="directive">id</span>=<span class="attr">"name"</span> <span class="directive">name</span>=<span class="attr">"name"</span> <span class="directive">required</span> /&gt;</code></pre>
+  </div>
   <p>With the directive, the equivalent HTML code would be:</p>
-  <pre><code>&amp;#123;input type="text" label="Name" isRequired&amp;#125;</code></pre>
+  <div
+    class="border-gray-700 flex flex-row justify-between rounded-lg border font-medium items-center text-gray-300 p-4 w-full bg-gray-800 overflow-container overflow-auto"
+  >
+    <pre><code>&lt;<span class="tag">input</span> <span class="directive">type</span>=<span class="attr">"text"</span> <span class="directive">label</span>=<span class="attr">"Name"</span> <span class="directive">isRequired</span>/&gt;</code></pre>
+  </div>
   <p>
     As you can see, it significantly reduces the amount of code needed, making
     your forms easier to read and maintain.
   </p>
 </section>
+
+<style>
+  <style > .overflow-container {
+    width: 200px;
+    height: 100px;
+    overflow: auto;
+    border: 1px solid black;
+  }
+
+  /* Custom scrollbar for WebKit browsers */
+  .overflow-container::-webkit-scrollbar {
+    width: 12px; /* Width of the entire scrollbar */
+    border-radius: 0.5rem;
+  }
+
+  .overflow-container::-webkit-scrollbar-track {
+    background: rgb(55 65 81 / var(--tw-border-opacity));
+    border-radius: 0.5rem;
+  }
+
+  .overflow-container::-webkit-scrollbar-thumb {
+    background: rgb(
+      31 41 55 / var(--tw-bg-opacity)
+    ); /* Color of the scroll thumb when hovered */
+    border-radius: 0.5rem;
+  }
+
+  .overflow-container::-webkit-scrollbar-thumb:hover {
+    background: rgb(
+      55 65 81 / var(--tw-border-opacity)
+    ); /* Color of the scroll thumb */
+    border-radius: 0.5rem;
+  }
+</style>
