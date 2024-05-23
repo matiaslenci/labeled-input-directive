@@ -13,22 +13,21 @@
   <p class="lg:text-xl text-lg">For Angular v15 or superior</p>
   <p class="lg:text-xl text-lg">
     Check out the code on <a
-      href="https://github.com/tu_usuario/tu_repositorio"
+      href="https://github.com/matiaslenci/LabeledInputDirective"
       target="_blank">GitHub</a
     >.
   </p>
 </header>
 <style>
-    a {
-    cursor: pointer;
+  a {
     position: relative;
     display: inline-block;
     text-decoration: none; /* Remueve el subrayado predeterminado */
     font-weight: semibold;
-}
+  }
 
-a::after {
-    content: '';
+  a::after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 3px; /* Ajusta el grosor del subrayado */
@@ -36,9 +35,9 @@ a::after {
     left: 0;
     bottom: -3px; /* Ajusta la distancia desde el texto */
     transition: all 0.3s ease;
-}
+  }
 
-a:hover::after {
+  a:hover::after {
     height: 5px; /* Ancho del subrayado al pasar el mouse */
-}
+  }
 </style>
