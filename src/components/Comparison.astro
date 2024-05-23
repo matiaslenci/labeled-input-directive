@@ -1,7 +1,12 @@
-<section class="[&>p]:text-lg [&>p]:text-pretty space-y-3">
-  <h3 class="text-3xl font-medium text-red-400">Comparison</h3>
-  <p>
-    Without using the directive, the HTML code to create a label and an input
+---
+import CancelIcon from "../icons/CancelIcon.astro";
+import CheckIcon from "../icons/CheckIcon.astro";
+import Title from "./Title.astro";
+---
+
+<section class="[&>p]:text-lg [&>p]:text-pretty [&>p]:py-1 space-y-3">
+  <Title>Comparison</Title>
+  <p><CancelIcon/><span class="subrayado">Without using the directive</span>, the HTML code to create a label and an input
     field might look like this:
   </p>
   <div
@@ -10,7 +15,7 @@
     <pre><code>&lt;<span class="tag">label</span> <span class="directive">for</span>=<span class="attr">"name"</span>&gt;Name:&lt;<span class="tag">label</span>/&gt;
 &lt;<span class="tag">input</span> <span class="directive">type</span>=<span class="attr">"text"</span> <span class="directive">class</span>=<span class="attr">"form-control"</span> <span class="directive">id</span>=<span class="attr">"name"</span> <span class="directive">name</span>=<span class="attr">"name"</span> <span class="directive">required</span> /&gt;</code></pre>
   </div>
-  <p>With the directive, the equivalent HTML code would be:</p>
+  <p> <CheckIcon/><span class="subrayado">With the directive</span>, the equivalent HTML code would be:</p>
   <div
     class="border-gray-700 flex flex-row justify-between rounded-lg border font-medium items-center text-gray-300 p-4 w-full bg-gray-800 overflow-container overflow-auto"
   >
@@ -23,6 +28,29 @@
 </section>
 
 <style>
+  .subrayado {
+    cursor: default;
+    position: relative;
+    display: inline-block;
+    text-decoration: none; /* Remueve el subrayado predeterminado */
+    font-weight: semibold;
+}
+
+.subrayado::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px; /* Ajusta el grosor del subrayado */
+    background-color: rgb(253, 71, 71);
+    left: 0;
+    bottom: -3px; /* Ajusta la distancia desde el texto */
+    transition: all 0.3s ease;
+}
+
+.subrayado:hover::after {
+    height: 5px; /* Ancho del subrayado al pasar el mouse */
+}
+
   <style > .overflow-container {
     width: 200px;
     height: 100px;
