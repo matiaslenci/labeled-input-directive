@@ -3,15 +3,21 @@ import CopyIcon from "../icons/CopyIcon.astro";
 import PackageIcon from "../icons/PackageIcon.astro";
 import Title from "./Title.astro";
 ---
+
 <section>
   <Title>Install</Title>
-  <div class="border-gray-700 flex flex-row justify-between rounded-lg border font-medium items-center text-gray-300 p-4 w-full bg-gray-800">
+  <div
+    class="border-gray-700 card flex flex-row justify-between rounded-lg border font-medium items-center text-gray-300 p-4 w-full bg-gray-800"
+  >
     <div class="flex flex-row gap-3 items-center">
       <PackageIcon />
       <span id="copyText" class="container">npm i ngx-labeled-input</span>
     </div>
     <div class="relative">
-      <button id="copyButton" class="p-2 hover:bg-gray-900 hover:outline outline-1 rounded-lg relative">
+      <button
+        id="copyButton"
+        class="p-2 hover:bg-gray-900 hover:outline outline-1 rounded-lg relative"
+      >
         <CopyIcon />
       </button>
       <div id="tooltip" class="tooltip">Copied!</div>
@@ -20,64 +26,66 @@ import Title from "./Title.astro";
 </section>
 
 <script>
- document.getElementById('copyButton').addEventListener('click', function() {
+  document.getElementById("copyButton").addEventListener("click", function () {
     // Obtiene el texto a copiar
-    const textToCopy = document.getElementById('copyText').innerText;
+    const textToCopy = document.getElementById("copyText").innerText;
 
     // Crea un elemento temporal para seleccionar y copiar el texto
-    const tempInput = document.createElement('input');
+    const tempInput = document.createElement("input");
     tempInput.value = textToCopy;
     document.body.appendChild(tempInput);
 
     // Selecciona y copia el texto
     tempInput.select();
     tempInput.setSelectionRange(0, 99999); // Para dispositivos móviles
-    document.execCommand('copy');
+    document.execCommand("copy");
 
     // Remueve el elemento temporal
     document.body.removeChild(tempInput);
 
     // Muestra el tooltip
-    const tooltip = document.getElementById('tooltip');
-    tooltip.classList.add('show-tooltip');
+    const tooltip = document.getElementById("tooltip");
+    tooltip.classList.add("show-tooltip");
 
     // Oculta el tooltip después de 2 segundos
     setTimeout(() => {
-        tooltip.classList.remove('show-tooltip');
+      tooltip.classList.remove("show-tooltip");
     }, 2000);
-});
-
+  });
 </script>
-<style>.tooltip {
-  visibility: hidden;
-  background-color: rgb(54, 54, 54);
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%; /* Posición del tooltip */
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
+<style>
+  .tooltip {
+    visibility: hidden;
+    background-color: rgb(54, 54, 54);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Posición del tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
 
-.tooltip::after {
-  content: '';
-  position: absolute;
-  top: 100%; /* Flecha hacia abajo */
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: rgb(54, 54, 54) transparent transparent transparent;
-}
+  .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Flecha hacia abajo */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(54, 54, 54) transparent transparent transparent;
+  }
 
-.show-tooltip {
-  visibility: visible;
-  opacity: 1;
-}
+  .show-tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
 
 </style>
