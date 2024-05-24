@@ -12,17 +12,51 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="https://v17.angular.io/assets/images/favicons/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://v17.angular.io/assets/images/favicons/favicon.ico"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta
+      name="description"
+      content="The ngx-label is designed to simplify the creation of labels and input fields in Angular forms. Add labels and input fields in a single element, and highlight mandatory fields with an asterisk."
+    />
+    <meta
+      name="keywords"
+      content="Angular, Ngx Labeled Input, Angular forms, labels, input fields, directive, required fields, form validation"
+    />
+    <meta name="author" content="Matias Alejandro Lenci" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Ngx Labeled Input - Simplify Labels and Inputs in Angular Forms"
+    />
+    <meta
+      property="og:description"
+      content="The ngx-label is designed to simplify the creation of labels and input fields in Angular forms. Add labels and input fields in a single element, and highlight mandatory fields with an asterisk."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      name="twitter:title"
+      content="Ngx Labeled Input - Simplify Labels and Inputs in Angular Forms"
+    />
+    <meta
+      name="twitter:description"
+      content="The ngx-label is designed to simplify the creation of labels and input fields in Angular forms. Add labels and input fields in a single element, and highlight mandatory fields with an asterisk."
+    />
+    <meta
+      name="twitter:image"
+      content="https://yourwebsite.com/assets/ngx-labeled-input.png"
+    />
   </head>
   <body class="bg-[#000000] text-white">
-		<main class="max-w-3xl mx-auto min-h-screen px-6 sm:px-8 my-16 space-y-8">
-			
-			<slot/>
-      
-		</main>
-
+    <main class="max-w-3xl mx-auto min-h-screen px-6 sm:px-8 my-16 space-y-8">
+      <slot />
+    </main>
   </body>
 </html>
 <style is:global>
@@ -30,8 +64,8 @@ const { title } = Astro.props;
     font-family: system-ui, sans-serif;
   }
 
-  .code{
-    @apply border-gray-700 p-0.5 rounded-lg border font-medium items-center text-gray-300  bg-gray-800
+  .code {
+    @apply border-gray-700 p-0.5 rounded-lg border font-medium items-center text-gray-300  bg-gray-800;
   }
 
   .tag {
@@ -46,11 +80,11 @@ const { title } = Astro.props;
     @apply text-green-400;
   }
 
-  .keys{
+  .keys {
     @apply text-yellow-300;
   }
 
-  .module{
+  .module {
     @apply text-blue-400;
   }
 
@@ -64,4 +98,3 @@ const { title } = Astro.props;
     color: #fff; /* Texto blanco */
   }
 </style>
-
