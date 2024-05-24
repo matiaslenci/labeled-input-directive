@@ -7,7 +7,7 @@ Additionally, it also allows adding an asterisk `(*)` to required texts to highl
 ## Install
 
 ```bash
-npm i ngx-labeled-input
+npm i ngx-label
 ```
 
 ## Usage
