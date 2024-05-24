@@ -1,6 +1,6 @@
 # Ngx Labeled Input
 
-The `LabeledInputDirective` is designed to simplify the creation of labels and input fields in Angular forms. This directive allows adding a label and an input field in a single element.
+The `ngx-label` is designed to simplify the creation of labels and input fields in Angular forms. This directive allows adding a label and an input field in a single element.
 
 Additionally, it also allows adding an asterisk `(*)` to required texts to highlight mandatory fields in the form.
 
@@ -8,6 +8,21 @@ Additionally, it also allows adding an asterisk `(*)` to required texts to highl
 
 ```bash
 npm i ngx-label
+```
+
+## Config
+After installing the package, import NgxLabelModule into your module.
+```typescript
+  import { NgModule } from '@angular/core';
+  import { NgxLabelModule } from './ngx-label';
+    
+  @NgModule({
+    import: [
+      LNgxLabelDirective
+      ],
+    })
+    
+  export class AppModule { }
 ```
 
 ## Usage

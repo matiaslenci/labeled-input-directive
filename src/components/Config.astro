@@ -1,0 +1,27 @@
+---
+import Title from "./Title.astro";
+---
+
+<section class="[&>p]:text-lg [&>p]:text-pretty space-y-3">
+  <Title>Config</Title>
+  <p>
+    After installing the package, import <code class="code">NgxLabelModule</code
+    > into your module.
+  </p>
+
+  <div class="card">
+    <pre>
+  <code>
+  <span class="tag">import</span> <span class="keys">&#123;</span> NgModule <span class="keys">&#125;</span> <span class="tag">from</span> <span class="attr">'@angular/core'</span>;
+  <span class="tag">import</span> <span class="keys">&#123;</span> NgxLabelModule <span class="keys">&#125;</span> <span class="tag">from</span> <span class="attr">'./ngx-label'</span>;
+    
+  @<span class="module">NgModule</span><span class="keys">(</span><span class="tag">&#123;</span>
+    import: <span class="module">[</span>
+      LabeledInputDirective
+      <span class="module">]</span>,
+    <span class="tag">&#125;</span><span class="keys">)</span>
+    
+  <span class="tag">export</span> <span class="tag">class</span> <span class="keys">AppModule</span> <span class="keys">&#123;</span> <span class="keys">&#125;</span></code>
+  </pre>
+  </div>
+</section>
